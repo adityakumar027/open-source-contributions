@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 4 | 2 | 1 | 0 |
+| 7 | 5 | 1 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -16,6 +16,9 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37097 - catalog: use presentation API for CatalogTable name and title columns](https://github.com/backstage/backstage/pull/37097) | 🟡 In review | 23 Nov 2026 |
 | [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) (CNCF) | [#11418 - docs(mcp): document missing MCP server tools and fix transport comment](https://github.com/Apicurio/apicurio-registry/pull/11418) | 🟢 Approved, awaiting merge | 20 Nov 2026 |
 | [Jaeger](https://github.com/jaegertracing/jaeger) (CNCF) | [#10263 - fix(memory): match trace_id and span_id filter constants case-insensitively](https://github.com/jaegertracing/jaeger/pull/10263) | 🟡 In review | 23 Nov 2026 |
+| [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#453 - feat(targeting): add single-clause if scenario](https://github.com/open-feature/flagd-testbed/pull/453) | 🟡 In review | 23 Nov 2026 |
+| [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review | 23 Nov 2026 |
+| [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review | 23 Nov 2026 |
 
 ## Details
 
@@ -27,6 +30,12 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). Threads t
 
 ### Apicurio Registry #11418
 Fixes [#11346](https://github.com/Apicurio/apicurio-registry/issues/11346). Documents the MCP server tools that were missing from the docs and fixes a transport comment. DCO sign-off and SonarCloud pass; approved by a maintainer, waiting for merge.
+
+### flagd testbed #453
+Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage.
+
+### Kyverno Policies #1758 and #1759
+Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check image exemptions against `exceptions.allowedImages`, so exempted images are not wrongly blocked.
 
 ### Jaeger #10263
 Fixes [#10224](https://github.com/jaegertracing/jaeger/issues/10224). The in-memory storage backend ignored uppercase trace/span IDs; the fix matches the filter constants case-insensitively.

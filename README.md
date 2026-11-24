@@ -64,7 +64,7 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). `EntityLa
 Refs [#933](https://github.com/hotosm/drone-tm/issues/933). Adds a Potensic Eve (iOS) export to the drone-tm flight planner: a `createPotensicEveJson` serializer writing Eve's `waypoints.json` format (ported from the qfield-plugin), an Android/Eve app picker for the Atom 2, a 200-waypoint download guard, and tests (vitest 392 passing, `tsc --noEmit` clean).
 
 ### flagd testbed #453
-Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage.
+Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage. Maintainers assigned issue [#452](https://github.com/open-feature/flagd-testbed/issues/452) to me on 25 Nov 2026; the PR closes it and CI is green.
 
 ### Kyverno Policies #1758 and #1759
 Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check image exemptions against `exceptions.allowedImages`, so exempted images are not wrongly blocked. Both approved by a reviewer, waiting on maintainer merge.

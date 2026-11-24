@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 9 | 7 | 1 | 0 |
+| 10 | 8 | 1 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -19,6 +19,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#453 - feat(targeting): add single-clause if scenario](https://github.com/open-feature/flagd-testbed/pull/453) | 🟡 In review | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37103 - catalog: use presentation API for EntityLayout header title](https://github.com/backstage/backstage/pull/37103) | 🟡 In review | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37104 - home: use presentation API for the WelcomeTitle display name](https://github.com/backstage/backstage/pull/37104) | 🟡 In review | 23 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37112 - cli-module-lint: resolve eslint and globby for repo lint workers from the module](https://github.com/backstage/backstage/pull/37112) | 🟡 In review | 24 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review | 23 Nov 2026 |
 

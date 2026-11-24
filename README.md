@@ -33,6 +33,9 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). Threads t
 ### Apicurio Registry #11418
 Fixes [#11346](https://github.com/Apicurio/apicurio-registry/issues/11346). Documents the MCP server tools that were missing from the docs and fixes a transport comment. DCO sign-off and SonarCloud pass; approved by a maintainer, waiting for merge.
 
+### Backstage #37112
+Part of [#37107](https://github.com/backstage/backstage/issues/37107). `repo lint` workers are eval'd `Worker` threads whose `require` resolves from the current directory, so they failed with strict `node_modules` layouts like pnpm's isolated linker. The parent now resolves `eslint` and `globby` via `require.resolve` and passes the paths to the worker. Split with the issue author, who keeps the `eslint-factory` part.
+
 ### Backstage #37104
 Part of [#20955](https://github.com/backstage/backstage/issues/20955). `WelcomeTitle` now renders the signed-in user's name through `EntityDisplayName` for their entity ref instead of the raw identity profile display name, so the greeting matches the rest of Backstage. Changeset and presentation-API test included.
 

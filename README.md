@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 13 | 9 | 3 | 0 |
+| 14 | 10 | 3 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -25,6 +25,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138752 - Live: start datasource streams only after the subscribe reply is sent](https://github.com/grafana/grafana/pull/138752) | 🟡 In review | 24 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟢 Approved, awaiting merge | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟢 Approved, awaiting merge | 23 Nov 2026 |
+| [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review | 24 Nov 2026 |
 
 ## Details
 
@@ -54,6 +55,9 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). `WelcomeT
 
 ### Backstage #37103
 Part of [#20955](https://github.com/backstage/backstage/issues/20955). `EntityLayout`'s header/document title now resolves through the catalog presentation API instead of raw `metadata.title`/`name`, keeping it consistent with the rest of Backstage. Includes a changeset and a test with a mocked presentation API.
+
+### Drone Tasking Manager #938
+Refs [#933](https://github.com/hotosm/drone-tm/issues/933). Adds a Potensic Eve (iOS) export to the drone-tm flight planner: a `createPotensicEveJson` serializer writing Eve's `waypoints.json` format (ported from the qfield-plugin), an Android/Eve app picker for the Atom 2, a 200-waypoint download guard, and tests (vitest 392 passing, `tsc --noEmit` clean).
 
 ### flagd testbed #453
 Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage.

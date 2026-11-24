@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 12 | 8 | 3 | 0 |
+| 13 | 9 | 3 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -22,6 +22,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37112 - cli-module-lint: resolve eslint and globby for repo lint workers from the module](https://github.com/backstage/backstage/pull/37112) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138730 - Alerting: clean up state of rules deleted before the scheduler’s first tick](https://github.com/grafana/grafana/pull/138730) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138737 - Alerting: retry file provisioning on optimistic-lock conflicts](https://github.com/grafana/grafana/pull/138737) | 🟡 In review | 24 Nov 2026 |
+| [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138752 - Live: start datasource streams only after the subscribe reply is sent](https://github.com/grafana/grafana/pull/138752) | 🟡 In review | 24 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟢 Approved, awaiting merge | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟢 Approved, awaiting merge | 23 Nov 2026 |
 
@@ -41,6 +42,9 @@ Fixes [#138611](https://github.com/grafana/grafana/issues/138611). A rule delete
 
 ### Grafana #138737
 Fixes [#138729](https://github.com/grafana/grafana/issues/138729). Concurrent file-provisioning reloads on HA replicas could hit an optimistic-lock version conflict and fail the whole reload with a 500. The provisioner now retries rule operations up to 3 times on `ErrOptimisticLock`, re-fetching the rule for a fresh version each attempt, with 3 new tests.
+
+### Grafana #138752
+Fixes [#138739](https://github.com/grafana/grafana/issues/138739). A datasource stream could publish its whole result before the client’s subscription completed; those publications are dropped and the search list loads forever. The stream now starts only after the subscribe reply is written, via centrifuge’s `SubscriptionReady`. Includes 2 new dispatcher tests.
 
 ### Backstage #37112
 Part of [#37107](https://github.com/backstage/backstage/issues/37107). `repo lint` workers are eval'd `Worker` threads whose `require` resolves from the current directory, so they failed with strict `node_modules` layouts like pnpm's isolated linker. The parent now resolves `eslint` and `globby` via `require.resolve` and passes the paths to the worker. Split with the issue author, who keeps the `eslint-factory` part.

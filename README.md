@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 10 | 8 | 1 | 0 |
+| 11 | 9 | 1 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -20,6 +20,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37103 - catalog: use presentation API for EntityLayout header title](https://github.com/backstage/backstage/pull/37103) | 🟡 In review | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37104 - home: use presentation API for the WelcomeTitle display name](https://github.com/backstage/backstage/pull/37104) | 🟡 In review | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37112 - cli-module-lint: resolve eslint and globby for repo lint workers from the module](https://github.com/backstage/backstage/pull/37112) | 🟡 In review | 24 Nov 2026 |
+| [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138730 - Alerting: clean up state of rules deleted before the scheduler’s first tick](https://github.com/grafana/grafana/pull/138730) | 🟡 In review | 24 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review | 23 Nov 2026 |
 
@@ -33,6 +34,9 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). Threads t
 
 ### Apicurio Registry #11418
 Fixes [#11346](https://github.com/Apicurio/apicurio-registry/issues/11346). Documents the MCP server tools that were missing from the docs and fixes a transport comment. DCO sign-off and SonarCloud pass; approved by a maintainer, waiting for merge.
+
+### Grafana #138730
+Fixes [#138611](https://github.com/grafana/grafana/issues/138611). A rule deleted between state-cache warmup and the scheduler's first tick kept its alert state forever; the first tick now removes cache entries for rules that no longer exist, with resolved notifications via the normal deleted-rule path. Unit test included.
 
 ### Backstage #37112
 Part of [#37107](https://github.com/backstage/backstage/issues/37107). `repo lint` workers are eval'd `Worker` threads whose `require` resolves from the current directory, so they failed with strict `node_modules` layouts like pnpm's isolated linker. The parent now resolves `eslint` and `globby` via `require.resolve` and passes the paths to the worker. Split with the issue author, who keeps the `eslint-factory` part.

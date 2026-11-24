@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 12 | 10 | 1 | 0 |
+| 12 | 8 | 3 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -22,8 +22,8 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37112 - cli-module-lint: resolve eslint and globby for repo lint workers from the module](https://github.com/backstage/backstage/pull/37112) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138730 - Alerting: clean up state of rules deleted before the scheduler’s first tick](https://github.com/grafana/grafana/pull/138730) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138737 - Alerting: retry file provisioning on optimistic-lock conflicts](https://github.com/grafana/grafana/pull/138737) | 🟡 In review | 24 Nov 2026 |
-| [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review | 23 Nov 2026 |
-| [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review | 23 Nov 2026 |
+| [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟢 Approved, awaiting merge | 23 Nov 2026 |
+| [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟢 Approved, awaiting merge | 23 Nov 2026 |
 
 ## Details
 
@@ -55,7 +55,7 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). `EntityLa
 Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage.
 
 ### Kyverno Policies #1758 and #1759
-Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check image exemptions against `exceptions.allowedImages`, so exempted images are not wrongly blocked.
+Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check image exemptions against `exceptions.allowedImages`, so exempted images are not wrongly blocked. Both approved by a reviewer, waiting on maintainer merge.
 
 ### Jaeger #10263
 Fixes [#10224](https://github.com/jaegertracing/jaeger/issues/10224). The in-memory storage backend ignored uppercase trace/span IDs; the fix matches the filter constants case-insensitively.

@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 14 | 12 | 1 | 0 |
+| 15 | 13 | 1 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -23,6 +23,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138730 - Alerting: clean up state of rules deleted before the scheduler’s first tick](https://github.com/grafana/grafana/pull/138730) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138737 - Alerting: retry file provisioning on optimistic-lock conflicts](https://github.com/grafana/grafana/pull/138737) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138752 - Live: start datasource streams only after the subscribe reply is sent](https://github.com/grafana/grafana/pull/138752) | 🟡 In review | 24 Nov 2026 |
+| [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138815 - Plugins: preserve omitted settings in updateAppPluginSettings](https://github.com/grafana/grafana/pull/138815) | 🟡 In review | 24 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review | 24 Nov 2026 |
@@ -46,6 +47,9 @@ Fixes [#138729](https://github.com/grafana/grafana/issues/138729). Concurrent fi
 
 ### Grafana #138752
 Fixes [#138739](https://github.com/grafana/grafana/issues/138739). A datasource stream could publish its whole result before the client’s subscription completed; those publications are dropped and the search list loads forever. The stream now starts only after the subscribe reply is written, via centrifuge’s `SubscriptionReady`. Includes 2 new dispatcher tests.
+
+### Grafana #138815
+Fixes [#138782](https://github.com/grafana/grafana/issues/138782). With `plugins.useMTPluginSettings` enabled, `updateAppPluginSettings` diffed the stored Settings resource against an update built only from the fields the caller passed, so any omitted field (like `enabled`, `pinned`, or an existing secret) was deleted server-side. The update is now merged over the stored resource, matching the legacy endpoint: omitted fields stay unchanged, `secureJsonData` merges per key, `jsonData` replaces as a whole. Includes a regression test for the omitted-fields case.
 
 ### Backstage #37112
 Part of [#37107](https://github.com/backstage/backstage/issues/37107). `repo lint` workers are eval'd `Worker` threads whose `require` resolves from the current directory, so they failed with strict `node_modules` layouts like pnpm's isolated linker. The parent now resolves `eslint` and `globby` via `require.resolve` and passes the paths to the worker. Split with the issue author, who keeps the `eslint-factory` part.

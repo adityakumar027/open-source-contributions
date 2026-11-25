@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 16 | 14 | 1 | 0 |
+| 17 | 14 | 1 | 0 |
 
 ## 🔀 Pull Requests
 
@@ -28,8 +28,14 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review | 24 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37151 - fix(search-backend-module-elasticsearch): set minimum_should_match when filters are present](https://github.com/backstage/backstage/pull/37151) | 🟡 Open (CI running) | 26 Nov 2026 |
 
 ## Details
+
+### Backstage #37151
+
+- **Fix**: `ElasticSearchSearchEngine` now sets `minimumShouldMatch(1)` on the translated bool query. With a `filter` clause present, Elasticsearch defaults `minimum_should_match` to 0, which made the term optional and returned every document matching the filter (issue [#37150](https://github.com/backstage/backstage/issues/37150), claimed [here](https://github.com/backstage/backstage/issues/37150#issuecomment-7172872995)).
+- **Status**: Open, CI running.
 
 ### Backstage #37096
 Fixes [#32785](https://github.com/backstage/backstage/issues/32785). The `gitlab:group:ensureExists` scaffolder action failed when the owner path is a GitLab user namespace, because the Groups API returns 404 for user namespaces and the action then tried to create a group at an existing path. The fix resolves the first path segment through the Namespaces API: an existing user namespace is reused, and requesting subgroups under a user namespace fails with a clear error. Includes 4 new regression tests and a changeset. Closed unmerged on 23 Nov 2026: [#36876](https://github.com/backstage/backstage/pull/36876) already covered the same fix and was ahead in review.

@@ -79,7 +79,7 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). `WelcomeT
 Part of [#20955](https://github.com/backstage/backstage/issues/20955). `EntityLayout`'s header/document title now resolves through the catalog presentation API instead of raw `metadata.title`/`name`, keeping it consistent with the rest of Backstage. Includes a changeset and a test with a mocked presentation API.
 
 ### Drone Tasking Manager #938
-Refs [#933](https://github.com/hotosm/drone-tm/issues/933). Adds a Potensic Eve (iOS) export to the drone-tm flight planner: a `createPotensicEveJson` serializer writing Eve's `waypoints.json` format (ported from the qfield-plugin), an Android/Eve app picker for the Atom 2, a 200-waypoint download guard, and tests (vitest 392 passing, `tsc --noEmit` clean).
+Refs [#933](https://github.com/hotosm/drone-tm/issues/933). Adds Atom 2 iOS `waypoints.json` export with `createPotensicV2IosJson` in `potensic_v2_ios.js`. Nov 26 maintainer follow-up addressed in aa1ddaa: Android/iOS entries share the drone dropdown, platform values are `android` / `ios`, and the unused hover input is removed while `wp_hover_time` stays zero. The 200-waypoint download guard remains. All 401 tests and production build pass; upstream checks green, awaiting human re-review.
 
 ### flagd testbed #453
 Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage. Maintainers assigned issue [#452](https://github.com/open-feature/flagd-testbed/issues/452) to me on 25 Nov 2026; the PR closes it and CI is green.

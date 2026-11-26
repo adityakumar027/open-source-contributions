@@ -6,12 +6,13 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged | Drafts |
 | :---: | :---: | :---: | :---: | :---: |
-| 21 | 15 | 1 | 1 | 2 |
+| 22 | 16 | 1 | 1 | 2 |
 
 ## 🔀 Pull Requests
 
 | Project | Pull Request | Status | Opened |
 | :--- | :--- | :--- | :--- |
+| [Microsoft Semantic Kernel](https://github.com/microsoft/semantic-kernel) | [#14894 - Handle empty Postgres membership filters](https://github.com/microsoft/semantic-kernel/pull/14894) | In review | 26 Nov 2026 |
 | [Microsoft](https://github.com/microsoft/vscode-pylint) | [#946 - Update minimizer override for newer webpack](https://github.com/microsoft/vscode-pylint/pull/946) | In review | 26 Nov 2026 |
 | [Vercel](https://github.com/vercel/repository-dispatch) | [#24 - Retry workflow job visibility lookups](https://github.com/vercel/repository-dispatch/pull/24) | In review | 26 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37096 - gitlab:group:ensureExists: support GitLab user namespaces](https://github.com/backstage/backstage/pull/37096) | 🔴 Closed (duplicate of [#36876](https://github.com/backstage/backstage/pull/36876)) | 23 Nov 2026 |
@@ -89,3 +90,6 @@ Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check
 
 ### Jaeger #10263
 Fixes [#10224](https://github.com/jaegertracing/jaeger/issues/10224). The in-memory storage backend ignored uppercase trace/span IDs; the fix matches the filter constants case-insensitively.
+
+### Microsoft Semantic Kernel #14894
+Fixes [#14891](https://github.com/microsoft/semantic-kernel/issues/14891). Empty Postgres membership filters emit FALSE/TRUE, preserving left-operand validation and surrounding parameter order. Nine new regressions fail before the fix.159Postgres tests and237combined data/Postgres tests pass;5queries on a disposable localPostgres instance pass, includingNULL. Ruff/format checks pass andMicrosoftCLAgreen. Full repository suites not run; optionalChroma module excluded from shared-data run.

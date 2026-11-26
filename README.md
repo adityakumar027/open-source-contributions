@@ -32,9 +32,9 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review (maintainer changes addressed, awaiting re-review) | 24 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37151 - fix(search-backend-module-elasticsearch): set minimum_should_match when filters are present](https://github.com/backstage/backstage/pull/37151) | 🟡 Open (CI running) | 26 Nov 2026 |
 
-| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37165 - fix(scaffolder-backend): deliver completion events once per connection](https://github.com/backstage/backstage/pull/37165) | Draft, awaiting a ready-PR slot | 26 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37165 - fix(scaffolder-backend): deliver completion events once per connection](https://github.com/backstage/backstage/pull/37165) | Draft, CI 24/24 green; awaiting ready-PR slot | 26 Nov 2026 |
 
-| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37166 - fix(scaffolder-backend): tie cancellation watcher to worker lifecycle](https://github.com/backstage/backstage/pull/37166) | Draft, awaiting a ready-PR slot | 26 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37166 - fix(scaffolder-backend): tie cancellation watcher to worker lifecycle](https://github.com/backstage/backstage/pull/37166) | Draft, CI 24/24 green; awaiting ready-PR slot | 26 Nov 2026 |
 
 Drafts are not counted as in review. Backstage limits contributors without write access to five ready open PRs; the two tested scaffolder fixes remain drafts until a slot opens.
 

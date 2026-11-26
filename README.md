@@ -6,12 +6,13 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged | Drafts |
 | :---: | :---: | :---: | :---: | :---: |
-| 20 | 14 | 1 | 1 | 2 |
+| 21 | 15 | 1 | 1 | 2 |
 
 ## 🔀 Pull Requests
 
 | Project | Pull Request | Status | Opened |
 | :--- | :--- | :--- | :--- |
+| [Microsoft](https://github.com/microsoft/vscode-pylint) | [#946 - Update minimizer override for newer webpack](https://github.com/microsoft/vscode-pylint/pull/946) | In review | 26 Nov 2026 |
 | [Vercel](https://github.com/vercel/repository-dispatch) | [#24 - Retry workflow job visibility lookups](https://github.com/vercel/repository-dispatch/pull/24) | In review | 26 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37096 - gitlab:group:ensureExists: support GitLab user namespaces](https://github.com/backstage/backstage/pull/37096) | 🔴 Closed (duplicate of [#36876](https://github.com/backstage/backstage/pull/36876)) | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37097 - catalog: use presentation API for CatalogTable name and title columns](https://github.com/backstage/backstage/pull/37097) | 🟡 In review | 23 Nov 2026 |

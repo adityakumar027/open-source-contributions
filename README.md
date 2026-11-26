@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged | Drafts |
 | :---: | :---: | :---: | :---: | :---: |
-| 22 | 16 | 1 | 1 | 2 |
+| 22 | 13 | 3 | 2 | 2 |
 
 ## 🔀 Pull Requests
 
@@ -19,9 +19,9 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37097 - catalog: use presentation API for CatalogTable name and title columns](https://github.com/backstage/backstage/pull/37097) | 🟡 In review | 23 Nov 2026 |
 | [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) (CNCF) | [#11418 - docs(mcp): document missing MCP server tools and fix transport comment](https://github.com/Apicurio/apicurio-registry/pull/11418) | 🟣 Merged 26 Nov 2026 (carlesarnal)| 20 Nov 2026 |
 | [Jaeger](https://github.com/jaegertracing/jaeger) (CNCF) | [#10263 - fix(memory): match trace_id and span_id filter constants case-insensitively](https://github.com/jaegertracing/jaeger/pull/10263) | 🟡 In review | 23 Nov 2026 |
-| [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#453 - feat(targeting): add single-clause if scenario](https://github.com/open-feature/flagd-testbed/pull/453) | 🟢 Approved (toddbaert, awaiting merge) | 23 Nov 2026 |
-| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37103 - catalog: use presentation API for EntityLayout header title](https://github.com/backstage/backstage/pull/37103) | 🟡 In review | 23 Nov 2026 |
-| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37104 - home: use presentation API for the WelcomeTitle display name](https://github.com/backstage/backstage/pull/37104) | 🟡 In review | 23 Nov 2026 |
+| [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#453 - feat(targeting): add single-clause if scenario](https://github.com/open-feature/flagd-testbed/pull/453) | 🟣 Merged 26 Nov 2026 (20:36 IST) | 23 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37103 - catalog: use presentation API for EntityLayout header title](https://github.com/backstage/backstage/pull/37103) | 🟢 Approved by AmbrishRamachandiran (human; not merged) | 23 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37104 - home: use presentation API for the WelcomeTitle display name](https://github.com/backstage/backstage/pull/37104) | 🟢 Approved by AmbrishRamachandiran (human; not merged) | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37112 - cli-module-lint: resolve eslint and globby for repo lint workers from the module](https://github.com/backstage/backstage/pull/37112) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138730 - Alerting: clean up state of rules deleted before the scheduler’s first tick](https://github.com/grafana/grafana/pull/138730) | 🟡 In review | 24 Nov 2026 |
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138737 - Alerting: retry file provisioning on optimistic-lock conflicts](https://github.com/grafana/grafana/pull/138737) | 🟡 In review | 24 Nov 2026 |
@@ -31,7 +31,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review (maintainer changes addressed, awaiting re-review) | 24 Nov 2026 |
-| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37151 - fix(search-backend-module-elasticsearch): set minimum_should_match when filters are present](https://github.com/backstage/backstage/pull/37151) | 🟡 Open (CI running) | 26 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37151 - fix(search-backend-module-elasticsearch): set minimum_should_match when filters are present](https://github.com/backstage/backstage/pull/37151) | 🟢 Approved by AmbrishRamachandiran (human; not merged) | 26 Nov 2026 |
 
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37165 - fix(scaffolder-backend): deliver completion events once per connection](https://github.com/backstage/backstage/pull/37165) | Draft, CI 24/24 green; awaiting ready-PR slot | 26 Nov 2026 |
 

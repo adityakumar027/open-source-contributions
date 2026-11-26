@@ -27,7 +27,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | [Grafana](https://github.com/grafana/grafana) (Grafana Labs) | [#138882 - Authn: Log missing user token at debug level instead of warn](https://github.com/grafana/grafana/pull/138882) | 🟡 In review | 25 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1758 - fix(other-vpol/check-nvidia-gpu): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1758) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) (CNCF) | [#1759 - fix(other-vpol/block-large-images): check image exemptions against exceptions.allowedImages](https://github.com/kyverno/policies/pull/1759) | 🟡 In review (Copilot-bot approved; needs human maintainer approval) | 23 Nov 2026 |
-| [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review | 24 Nov 2026 |
+| [Drone Tasking Manager](https://github.com/hotosm/drone-tm) (HOT) | [#938 - feat(flight-planner): add Potensic Eve (iOS) waypoints.json output](https://github.com/hotosm/drone-tm/pull/938) | 🟡 In review (maintainer changes addressed, awaiting re-review) | 24 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37151 - fix(search-backend-module-elasticsearch): set minimum_should_match when filters are present](https://github.com/backstage/backstage/pull/37151) | 🟡 Open (CI running) | 26 Nov 2026 |
 
 ## Details

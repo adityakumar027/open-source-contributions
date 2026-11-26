@@ -6,7 +6,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged |
 | :---: | :---: | :---: | :---: |
-| 17 | 13 | 2 | 0 |
+| 17 | 13 | 1 | 1 |
 
 ## 🔀 Pull Requests
 
@@ -14,7 +14,7 @@ Live tracker of my open source pull requests across major projects. Updated as P
 | :--- | :--- | :--- | :--- |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37096 - gitlab:group:ensureExists: support GitLab user namespaces](https://github.com/backstage/backstage/pull/37096) | 🔴 Closed (duplicate of [#36876](https://github.com/backstage/backstage/pull/36876)) | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37097 - catalog: use presentation API for CatalogTable name and title columns](https://github.com/backstage/backstage/pull/37097) | 🟡 In review | 23 Nov 2026 |
-| [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) (CNCF) | [#11418 - docs(mcp): document missing MCP server tools and fix transport comment](https://github.com/Apicurio/apicurio-registry/pull/11418) | 🟢 Approved, awaiting merge | 20 Nov 2026 |
+| [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) (CNCF) | [#11418 - docs(mcp): document missing MCP server tools and fix transport comment](https://github.com/Apicurio/apicurio-registry/pull/11418) | 🟣 Merged 26 Nov 2026 (carlesarnal)| 20 Nov 2026 |
 | [Jaeger](https://github.com/jaegertracing/jaeger) (CNCF) | [#10263 - fix(memory): match trace_id and span_id filter constants case-insensitively](https://github.com/jaegertracing/jaeger/pull/10263) | 🟡 In review | 23 Nov 2026 |
 | [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#453 - feat(targeting): add single-clause if scenario](https://github.com/open-feature/flagd-testbed/pull/453) | 🟢 Approved (toddbaert, awaiting merge) | 23 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37103 - catalog: use presentation API for EntityLayout header title](https://github.com/backstage/backstage/pull/37103) | 🟡 In review | 23 Nov 2026 |

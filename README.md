@@ -6,12 +6,14 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged | Drafts |
 | :---: | :---: | :---: | :---: | :---: |
-| 22 | 13 | 3 | 2 | 2 |
+| 24 | 13 | 3 | 4 | 2 |
 
 ## 🔀 Pull Requests
 
 | Project | Pull Request | Status | Opened |
 | :--- | :--- | :--- | :--- |
+| [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#455 - Check unchanged flags are absent from change events](https://github.com/open-feature/flagd-testbed/pull/455) | Merged 27 Nov 2026 | 27 Nov 2026 |
+| [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#456 - Add fractional float integer-boundary cases](https://github.com/open-feature/flagd-testbed/pull/456) | Merged 27 Nov 2026 | 27 Nov 2026 |
 | [Microsoft Semantic Kernel](https://github.com/microsoft/semantic-kernel) | [#14894 - Handle empty Postgres membership filters](https://github.com/microsoft/semantic-kernel/pull/14894) | In review | 26 Nov 2026 |
 | [Microsoft](https://github.com/microsoft/vscode-pylint) | [#946 - Update minimizer override for newer webpack](https://github.com/microsoft/vscode-pylint/pull/946) | In review | 26 Nov 2026 |
 | [Vercel](https://github.com/vercel/repository-dispatch) | [#24 - Retry workflow job visibility lookups](https://github.com/vercel/repository-dispatch/pull/24) | In review | 26 Nov 2026 |
@@ -44,7 +46,7 @@ Drafts are not counted as in review. Backstage limits contributors without write
 ### Backstage #37151
 
 - **Fix**: `ElasticSearchSearchEngine` now sets `minimumShouldMatch(1)` on the translated bool query. With a `filter` clause present, Elasticsearch defaults `minimum_should_match` to 0, which made the term optional and returned every document matching the filter (issue [#37150](https://github.com/backstage/backstage/issues/37150), claimed [here](https://github.com/backstage/backstage/issues/37150#issuecomment-7172872995)).
-- **Status**: Approved by maintainer toddbaert (25 Nov), awaiting merge, CI running.
+- **Status**: Approved by AmbrishRamachandiran (human) on 26 Nov 2026; still open, not merged. Reported upstream checks green.
 
 ### Backstage #37096
 Fixes [#32785](https://github.com/backstage/backstage/issues/32785). The `gitlab:group:ensureExists` scaffolder action failed when the owner path is a GitLab user namespace, because the Groups API returns 404 for user namespaces and the action then tried to create a group at an existing path. The fix resolves the first path segment through the Namespaces API: an existing user namespace is reused, and requesting subgroups under a user namespace fails with a clear error. Includes 4 new regression tests and a changeset. Closed unmerged on 23 Nov 2026: [#36876](https://github.com/backstage/backstage/pull/36876) already covered the same fix and was ahead in review.
@@ -53,7 +55,7 @@ Fixes [#32785](https://github.com/backstage/backstage/issues/32785). The `gitlab
 Part of [#20955](https://github.com/backstage/backstage/issues/20955). Threads the entity presentation API through `CatalogTable`'s default columns and uses it for the title column's sort, search and rendering, so entity titles stay consistent across Backstage. Includes a changeset and new unit tests for the column factories.
 
 ### Apicurio Registry #11418
-Fixes [#11346](https://github.com/Apicurio/apicurio-registry/issues/11346). Documents the MCP server tools that were missing from the docs and fixes a transport comment. DCO sign-off and SonarCloud pass; approved by a maintainer, waiting for merge.
+Fixes [#11346](https://github.com/Apicurio/apicurio-registry/issues/11346). Documents the MCP server tools that were missing from the docs and fixes a transport comment. DCO sign-off and SonarCloud pass; approved and merged by carlesarnal on 26 Nov 2026.
 
 ### Grafana #138730
 Fixes [#138611](https://github.com/grafana/grafana/issues/138611). A rule deleted between state-cache warmup and the scheduler's first tick kept its alert state forever; the first tick now removes cache entries for rules that no longer exist, with resolved notifications via the normal deleted-rule path. Unit test included.
@@ -83,13 +85,19 @@ Part of [#20955](https://github.com/backstage/backstage/issues/20955). `EntityLa
 Refs [#933](https://github.com/hotosm/drone-tm/issues/933). Adds Atom 2 iOS `waypoints.json` export with `createPotensicV2IosJson` in `potensic_v2_ios.js`. Nov 26 maintainer follow-up addressed in aa1ddaa: Android/iOS entries share the drone dropdown, platform values are `android` / `ios`, and the unused hover input is removed while `wp_hover_time` stays zero. The 200-waypoint download guard remains. All 401 tests and production build pass; upstream checks green, awaiting human re-review.
 
 ### flagd testbed #453
-Adds a single-clause `if` targeting scenario to the flagd end-to-end testbed, extending targeting coverage. Maintainers assigned issue [#452](https://github.com/open-feature/flagd-testbed/issues/452) to me on 25 Nov 2026; the PR closes it and CI is green.
+Adds a single-argument `if` targeting scenario for issue [#452](https://github.com/open-feature/flagd-testbed/issues/452). Maintainer rename requests were addressed. Merged on 26 Nov 2026 at 20:36 IST.
 
 ### Kyverno Policies #1758 and #1759
-Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check image exemptions against `exceptions.allowedImages`, so exempted images are not wrongly blocked. Both approved by a reviewer, waiting on maintainer merge.
+Fix the `check-nvidia-gpu` and `block-large-images` validating policies to check image exemptions against `exceptions.allowedImages`, so exempted images are not wrongly blocked. Both have Copilot bot approvals only, not human approvals. Both remain open and need human maintainer review.
 
 ### Jaeger #10263
 Fixes [#10224](https://github.com/jaegertracing/jaeger/issues/10224). The in-memory storage backend ignored uppercase trace/span IDs; the fix matches the filter constants case-insensitively.
 
 ### Microsoft Semantic Kernel #14894
 Fixes [#14891](https://github.com/microsoft/semantic-kernel/issues/14891). Empty Postgres membership filters emit FALSE/TRUE, preserving left-operand validation and surrounding parameter order. Nine new regressions fail before the fix.159Postgres tests and237combined data/Postgres tests pass;5queries on a disposable localPostgres instance pass, includingNULL. Ruff/format checks pass andMicrosoftCLAgreen. Full repository suites not run; optionalChroma module excluded from shared-data run.
+
+### flagd testbed #455
+Closes [#428](https://github.com/open-feature/flagd-testbed/issues/428): adds an unchanged flag and a separate scenario that rejects unchanged keys in change-event payloads. Gherkin lint passes; SDK scenario execution was not run here. Merged 27 Nov 2026 at 02:40 IST.
+
+### flagd testbed #456
+Closes [#430](https://github.com/open-feature/flagd-testbed/issues/430): adds five fractional-float boundary rows around the signed and unsigned 64-bit ranges. Gherkin lint passes. Expected buckets were taken from the issue reference table, not independently recomputed; SDK scenario execution was not run here. Merged 27 Nov 2026 at 01:19 IST.

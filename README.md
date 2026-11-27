@@ -6,12 +6,13 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged | Drafts |
 | :---: | :---: | :---: | :---: | :---: |
-| 27 | 16 | 4 | 4 | 2 |
+| 28 | 17 | 4 | 4 | 2 |
 
 ## 🔀 Pull Requests
 
 | Project | Pull Request | Status | Opened |
 | :--- | :--- | :--- | :--- |
+| [Netflix Archaius](https://github.com/Netflix/archaius) | [#777 - Return JDBC polling snapshots](https://github.com/Netflix/archaius/pull/777) | In review | 28 Nov 2026 |
 | [Vercel serve-handler](https://github.com/vercel/serve-handler) | [#246 - Close source streams after interrupted responses](https://github.com/vercel/serve-handler/pull/246) | In review | 27 Nov 2026 |
 | [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) | [#11497 - Use the config Boolean converter for the experimental gate](https://github.com/Apicurio/apicurio-registry/pull/11497) | In review | 26 Nov 2026 |
 | [Kyverno Policies](https://github.com/kyverno/policies) | [#1764 - Treat dropping ALL as dropping NET_RAW](https://github.com/kyverno/policies/pull/1764) | In review, bot feedback addressed; needs human review | 26 Nov 2026 |
@@ -107,7 +108,10 @@ Closes [#430](https://github.com/open-feature/flagd-testbed/issues/430): adds fi
 Fixes [#245](https://github.com/vercel/serve-handler/issues/245): closes the source file stream when a client interrupts a normal or range download. Two regressions fail on main and pass with the fix; all 72 integration tests, lint and build-views pass on Node 22.23.5. The 304 early return and conditional/range semantics are unchanged. AI assistance disclosed. Awaiting review.
 
 ### Apicurio Registry #11497
-Fixes the remaining validator gap in [#11389](https://github.com/Apicurio/apicurio-registry/issues/11389): reads the experimental property gate with the MicroProfile Config Boolean converter instead of Boolean.parseBoolean, so accepted true spellings are handled consistently. Eleven new unit tests pass. Checkstyle was not run locally. Open, awaiting human review.
+Fixes the remaining validator gap in [#11389](https://github.com/Apicurio/apicurio-registry/issues/11389): reads the experimental property gate with the MicroProfile Config Boolean converter instead of Boolean.parseBoolean, so accepted true spellings are handled consistently. Added real Boolean-definition regression tests after review. The earlier human approval was dismissed after the new push. Quick Check passes; full Verify has not run on the new head. Awaiting human re-review and full verification.
 
 ### Kyverno Policies #1764
 Fixes [#1720](https://github.com/kyverno/policies/issues/1720) for the VPOL policy: dropping ALL, case-insensitively, satisfies the NET_RAW drop requirement. Uppercase and lowercase fixtures pass; policy documentation and digest refreshed. Nine Kyverno CLI tests pass. Legacy policy variants are outside this PR. Open, no human approval.
+
+### Netflix Archaius #777
+Fixes [#509](https://github.com/Netflix/archaius/issues/509): makes JDCConfigReader implement Callable<PollingResponse>, with string-valued JDBC snapshots. Three regressions cover snapshot values, direct polling and empty replacement, and cleanup after SQL errors. Native Java 8 full build passes: 306 tests, zero failures, two skipped. Core suite: 235 tests, one skipped. The public call() return type changes, a source and binary compatibility change explicitly documented in the PR. Awaiting review and CI.

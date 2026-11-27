@@ -6,19 +6,22 @@ Live tracker of my open source pull requests across major projects. Updated as P
 
 | Opened | In review | Approved | Merged | Drafts |
 | :---: | :---: | :---: | :---: | :---: |
-| 24 | 13 | 3 | 4 | 2 |
+| 27 | 16 | 4 | 4 | 2 |
 
 ## 🔀 Pull Requests
 
 | Project | Pull Request | Status | Opened |
 | :--- | :--- | :--- | :--- |
+| [Vercel serve-handler](https://github.com/vercel/serve-handler) | [#246 - Close source streams after interrupted responses](https://github.com/vercel/serve-handler/pull/246) | In review | 27 Nov 2026 |
+| [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) | [#11497 - Use the config Boolean converter for the experimental gate](https://github.com/Apicurio/apicurio-registry/pull/11497) | In review | 26 Nov 2026 |
+| [Kyverno Policies](https://github.com/kyverno/policies) | [#1764 - Treat dropping ALL as dropping NET_RAW](https://github.com/kyverno/policies/pull/1764) | In review, bot feedback addressed; needs human review | 26 Nov 2026 |
 | [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#455 - Check unchanged flags are absent from change events](https://github.com/open-feature/flagd-testbed/pull/455) | Merged 27 Nov 2026 | 26 Nov 2026 |
 | [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#456 - Add fractional float integer-boundary cases](https://github.com/open-feature/flagd-testbed/pull/456) | Merged 27 Nov 2026 | 26 Nov 2026 |
 | [Microsoft Semantic Kernel](https://github.com/microsoft/semantic-kernel) | [#14894 - Handle empty Postgres membership filters](https://github.com/microsoft/semantic-kernel/pull/14894) | In review | 26 Nov 2026 |
 | [Microsoft](https://github.com/microsoft/vscode-pylint) | [#946 - Update minimizer override for newer webpack](https://github.com/microsoft/vscode-pylint/pull/946) | In review | 26 Nov 2026 |
 | [Vercel](https://github.com/vercel/repository-dispatch) | [#24 - Retry workflow job visibility lookups](https://github.com/vercel/repository-dispatch/pull/24) | In review | 26 Nov 2026 |
 | [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37096 - gitlab:group:ensureExists: support GitLab user namespaces](https://github.com/backstage/backstage/pull/37096) | 🔴 Closed (duplicate of [#36876](https://github.com/backstage/backstage/pull/36876)) | 23 Nov 2026 |
-| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37097 - catalog: use presentation API for CatalogTable name and title columns](https://github.com/backstage/backstage/pull/37097) | 🟡 In review | 23 Nov 2026 |
+| [Backstage](https://github.com/backstage/backstage) (Spotify) | [#37097 - catalog: use presentation API for CatalogTable name and title columns](https://github.com/backstage/backstage/pull/37097) | Approved by AmbrishRamachandiran (human; not merged) | 23 Nov 2026 |
 | [Apicurio Registry](https://github.com/Apicurio/apicurio-registry) (CNCF) | [#11418 - docs(mcp): document missing MCP server tools and fix transport comment](https://github.com/Apicurio/apicurio-registry/pull/11418) | 🟣 Merged 26 Nov 2026 (carlesarnal)| 20 Nov 2026 |
 | [Jaeger](https://github.com/jaegertracing/jaeger) (CNCF) | [#10263 - fix(memory): match trace_id and span_id filter constants case-insensitively](https://github.com/jaegertracing/jaeger/pull/10263) | 🟡 In review | 23 Nov 2026 |
 | [flagd testbed](https://github.com/open-feature/flagd-testbed) (CNCF) | [#453 - feat(targeting): add single-clause if scenario](https://github.com/open-feature/flagd-testbed/pull/453) | 🟣 Merged 26 Nov 2026 (20:36 IST) | 23 Nov 2026 |
@@ -99,3 +102,12 @@ Closes [#428](https://github.com/open-feature/flagd-testbed/issues/428): adds an
 
 ### flagd testbed #456
 Closes [#430](https://github.com/open-feature/flagd-testbed/issues/430): adds five fractional-float boundary rows around the signed and unsigned 64-bit ranges. Gherkin lint passes. Expected buckets were taken from the issue reference table, not independently recomputed; SDK scenario execution was not run here. Merged 27 Nov 2026 at 01:19 IST.
+
+### Vercel serve-handler #246
+Fixes [#245](https://github.com/vercel/serve-handler/issues/245): closes the source file stream when a client interrupts a normal or range download. Two regressions fail on main and pass with the fix; all 72 integration tests, lint and build-views pass on Node 22.23.5. The 304 early return and conditional/range semantics are unchanged. AI assistance disclosed. Awaiting review.
+
+### Apicurio Registry #11497
+Fixes the remaining validator gap in [#11389](https://github.com/Apicurio/apicurio-registry/issues/11389): reads the experimental property gate with the MicroProfile Config Boolean converter instead of Boolean.parseBoolean, so accepted true spellings are handled consistently. Eleven new unit tests pass. Checkstyle was not run locally. Open, awaiting human review.
+
+### Kyverno Policies #1764
+Fixes [#1720](https://github.com/kyverno/policies/issues/1720) for the VPOL policy: dropping ALL, case-insensitively, satisfies the NET_RAW drop requirement. Uppercase and lowercase fixtures pass; policy documentation and digest refreshed. Nine Kyverno CLI tests pass. Legacy policy variants are outside this PR. Open, no human approval.
